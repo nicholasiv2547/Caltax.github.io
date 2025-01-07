@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายการลดหย่อนภาษี</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>รายการลดหย่อนภาษี</h1>
+        <form id="deductions-form">
+            <label for="status">สถานะทางครอบครัว:</label>
+            <select id="status" name="status" required>
+                <option value="single">โสด</option>
+                <option value="divorced">หย่า</option>
+                <option value="spouse-with-income">คู่สมรสมีเงินได้ (แยกยื่น)</option>
+                <option value="spouse-without-income">คู่สมรสไม่มีเงินได้</option>
+            </select>
+
+            <label for="personal-deduction">
+                <input type="checkbox" id="personal-deduction"> ลดหย่อนส่วนบุคคล 60,000 บาท
+            </label>
+
+            <label for="parents-deduction">
+                <input type="checkbox" id="parents-deduction"> ลดหย่อนบิดา-มารดา (ตนเอง)
+                <small>คนละ 30,000 บาท (บิดามารดาต้องมีอายุเกิน 60 ปี และมีรายได้ไม่เกิน 30,000 บาทต่อปี)</small>
+            </label>
+
+            <label for="disabled-deduction">
+                <input type="checkbox" id="disabled-deduction"> ลดหย่อนผู้พิการหรือทุพพลภาพ (ไม่มีเงินได้)
+                <small>กรณีบิดา, มารดา, คู่สมรส, บิดาคู่สมรส, มารดาคู่สมรส หรือบุตรของตนเอง</small>
+            </label>
+
+            <button type="button" onclick="calculateTax()">คำนวณภาษี</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
