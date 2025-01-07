@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณภาษี</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>คำนวณภาษีรายได้</h1>
+        <form id="income-form">
+            <label for="salary">เงินเดือน (บาท):</label>
+            <input type="number" id="salary" name="salary" required>
+
+            <label for="bonus">โบนัส (บาท):</label>
+            <input type="number" id="bonus" name="bonus" required>
+
+            <label for="other-income">รายได้อื่นๆ (บาท):</label>
+            <input type="number" id="other-income" name="other-income" required>
+
+            <button type="button" onclick="nextPage()">ถัดไป</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
